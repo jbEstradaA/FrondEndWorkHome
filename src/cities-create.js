@@ -33,7 +33,13 @@ export class Welcome {
         body: this.cityName
       })
       .then(response => {
-        alert('The city was successfully saved');
-      });
+        if (response.status == 400) {
+          alert('The country alredy Exist');
+        }
+        else {
+          alert('The country was successfully saved');
+        }
+    }
+  );
   }
 }

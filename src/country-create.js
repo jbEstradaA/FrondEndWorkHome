@@ -32,8 +32,14 @@ export class Welcome {
         method: 'post',
         body: this.countryName
       })
-      .then(response => {
-        alert('The country was successfully saved');
-      });
+        .then(response => {
+          if (response.status == 400) {
+            alert('The country alredy Exist');
+          }
+          else {
+            alert('The country was successfully saved');
+          }
+      }
+    );
   }
 }
