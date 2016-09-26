@@ -1,0 +1,12 @@
+<template>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <form role="form" submit.delegate="submit()">
+      <div class="form-group">
+        <label for="cityName">Insert here the name of the city.</label>
+        <input type="text" value.bind="cityName" class="form-control" id="cityName" placeholder="City name">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </section>
+</template>
